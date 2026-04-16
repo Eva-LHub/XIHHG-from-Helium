@@ -1,4 +1,4 @@
-# XIHHG from Helium - Research Data & Code
+# XIHHG from Helium - Research Data & Code Scripts
 
 This repository contains raw experimental data and analysis code for:
 
@@ -24,7 +24,8 @@ Four visualisation/analysis scripts for generating thesis figures:
 - `Scripts/HHG_XUV_IR.py` - Standard Script for producing HHG Spectrum, including various delays, detuned XUV energies and XUV intensities
 - `Scripts/traj_ADK_XUV_IR.py` - Return Energies Trajectory Script with modified ADK Ionisation Potential
 - `Scripts/HHG_XUV_IR_Delays.py`- Colour-map of the effect of the time delay on the HHG spectrum
-- `Scripts/HHG_Pulse_Train.py`- HHG Spectrum for a Pulse Train 
+- `Scripts/HHG_Pulse_Train.py`- HHG Spectrum for a Pulse Train
+- Momentum Distribution figures were generated through the RMT_plot_mom function on Kelvin2
 
 
 See the thesis for figure references and detailed analysis.

@@ -6,17 +6,25 @@ This repository contains raw experimental data and analysis code for:
 
 Eva Loughridge, QUB MSci Thesis
 
-## Data
+## Data Directory
+Raw data generated using RMT (see https://gitlab.com/Uk-amor/RMT/rmt)
 
-- `data/time_delays/` - Raw measurements at various time delays
-- `data/varying_intensities/` - Raw measurements at different intensities
+- `data/IR Only/` - EField and Harmonic Velocity Dipole of the IR Laser Only
+- `data/XUV Only/` - EField and Harmonic Velocity Dipole of the XUV Laser Only
+- `data/XUV-IR/` - EField and Harmonic Velocity Dipole of the combined XUV-IR Laser field 
+   - `data/XUV-IR/Delays/` - EField and Harmonic Velocity Dipole for various time delays (time elapsed between the peak of the IR and the peak of the XUV laser pulse).
+   - `data/XUV-IR/Detune/` - Harmonic Velocity Dipole for various time XUV energies that are detuned from the 1s2p state in Helium
+   - `data/XUV-IR/Intensities/` - Harmonic Velocity Dipole for various intensities of the XUV laser
+   - `data/XUV-IR/Pulse-Train/` - EField and Harmonic Velocity Dipole for an XUV-IR pulse train
 
-## Analysis & Visualization
+## Analysis & Visualisation Scripts
 
-Three visualization/analysis scripts for generating thesis figures:
+Four visualisation/analysis scripts for generating thesis figures:
 
-- `code/visualization_type_1.py`
-- `code/visualization_type_2.py`
-- `code/visualization_type_3.py`
+- `Scripts/HHG_XUV_IR.py` - Standard Script for producing HHG Spectrum, including various delays, detuned XUV energies and XUV intensities
+- `Scripts/traj_ADK_XUV_IR.py` - Return Energies Trajectory Script with modified ADK Ionisation Potential
+- `Scripts/HHG_XUV_IR_Delays.py`- Colour-map of the effect of the time delay on the HHG spectrum
+- `Scripts/HHG_Pulse_Train.py`- HHG Spectrum for a Pulse Train 
+
 
 See the thesis for figure references and detailed analysis.

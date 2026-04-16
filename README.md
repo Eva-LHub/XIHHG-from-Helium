@@ -25,7 +25,7 @@ Four visualisation/analysis scripts for generating thesis figures:
 - `Scripts/traj_ADK_XUV_IR.py` - Return Energies Trajectory Script with modified ADK Ionisation Potential
 - `Scripts/HHG_XUV_IR_Delays.py`- Colour-map of the effect of the time delay on the HHG spectrum
 - `Scripts/HHG_Pulse_Train.py`- HHG Spectrum for a Pulse Train
-- Momentum distribution figures were generated using the RMT_plot_mom function from the RMT code, executed on the Kelvin2 system.
+- Momentum distribution figures were generated using the `RMT_plot_mom` function from the RMT code, executed on the Kelvin2 system.
 
 
-See the thesis for figure references and detailed analysis.
+See the thesis for figure references and detailed analysis

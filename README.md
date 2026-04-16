@@ -4,10 +4,10 @@ This repository contains raw experimental data and analysis code for:
 
 **"Strongly Enhanced and Controllable Plateau in Extreme Ultraviolet Initiated High Harmonic Generation from Helium"**
 
-Eva Loughridge, QUB MSci Thesis
+Eva Loughridge, QUB MSci Thesis April 2026
 
 ## Data Directory
-Raw data generated using RMT (see https://gitlab.com/Uk-amor/RMT/rmt)
+Raw data generated using RMT (see https://gitlab.com/Uk-amor/RMT/rmt) on the Kelvin2 high-performance computing facility
 
 - `data/IR Only/` - EField and Harmonic Velocity Dipole of the IR Laser Only
 - `data/XUV Only/` - EField and Harmonic Velocity Dipole of the XUV Laser Only

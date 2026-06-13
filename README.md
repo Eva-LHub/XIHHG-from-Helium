@@ -17,7 +17,7 @@ RMT provides the time-dependent wavefunction, from which can be computed the tim
    - `data/XUV-IR/Delays/` - EField and Harmonic Spectra for various time delays (time elapsed between the peak of the IR and the peak of the XUV laser pulse).
    - `data/XUV-IR/Detune/` - Harmonic Spectra for various time XUV energies that are detuned from the 1s2p state in Helium
    - `data/XUV-IR/Intensities/` - Harmonic Spectra for various intensities of the XUV laser
-   - `data/XUV-IR/Pulse-Train/` - EField and Harmonic Spectra for an XUV-IR pulse train
+   - `data/XUV-IR/Long-Pulse/` - EField and Harmonic Spectra for a Long Pulse XUV-IR laser
 
 ## Analysis & Visualisation Scripts
 
@@ -26,8 +26,9 @@ Four visualisation/analysis scripts for generating thesis figures:
 - `Scripts/HHG_XUV_IR.py` - Standard Script for visualising HHG Spectra, including various delays, detuned XUV energies and XUV intensities
 - `Scripts/traj_ADK_XUV_IR.py` - Return Energies Trajectory Script with modified ADK Ionisation Potential
 - `Scripts/HHG_XUV_IR_Delays.py`- Colour-map Script for the effect of the time delay on the HHG spectrum
-- `Scripts/HHG_Pulse_Train.py`- Script for visualising the HHG Spectrum of a Pulse Train
+- `Scripts/HHG_Long_Pulse.py`- Script for visualising the HHG Spectrum of a Long Pulse
+- `Scripts/HHG_Detune_Yield.py`- Script for visualising the integrated yield vs XUV energy (detuned)
 - Momentum distribution figures were generated using the `RMT_plot_mom` function from the RMT code, executed on the Kelvin2 system.
 
 
-See the thesis for figure references and detailed analysis.
+See paper for figure references and detailed analysis.

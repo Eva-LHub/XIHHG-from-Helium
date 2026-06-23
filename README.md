@@ -5,6 +5,8 @@ This repository contains raw experimental data and analysis code for:
 **"Strongly Enhanced and Controllable Plateau in Extreme Ultraviolet Initiated High Harmonic Generation from Helium"**
 
 Eva Loughridge, QUB MSci Thesis April 2026
+https://doi.org/10.5281/zenodo.20811793
+
 
 ## Data Directory
 Raw data generated using RMT (see https://gitlab.com/Uk-amor/RMT/rmt) on the Kelvin2 high-performance computing facility. 

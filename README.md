@@ -35,6 +35,7 @@ Four visualisation/analysis scripts for generating thesis figures:
 - `Scripts/HHG_Detune_and_Yield.py`- Script for visualising the integrated yield vs XUV energy (detuned)
 - `Scripts/HHG_Intensity_and_Yield.py`- Script for visualising the integrated yield vs XUV Intensity
 - `Scripts/EField_inset.py`- Script for visualising the electric-field profiles of the IR pulse and the XUV pulses
+- `Scripts/Lmax_Successive_Difference.py`- Script for visualising the difference in various maximum angular momentum values
 - `Scripts/trajectories_barrier.py`– Script for visualising the over-the-barrier probability for XUV-excited helium in a strong IR
 - Momentum distribution figures were generated using the `RMT_plot_mom` function from the RMT code, executed on the Kelvin2 system.
 

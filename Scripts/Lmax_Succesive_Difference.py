@@ -11,10 +11,10 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 
 harm = 0.057*27.212
-I_p= 24.59
+I_p = 24.59
 cutoff = 43.5
 c = 3e8
-l= 1800e6
+l = 1800e6
 f = c/l
 
 

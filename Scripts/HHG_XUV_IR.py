@@ -30,6 +30,12 @@ data_xuv_IR15_x01 = np.loadtxt("Harm_vel_0001_z_xuv_IRx0.01") #f = 0.78 au, I = 
 data_xuv_IR15_x001 = np.loadtxt("Harm_vel_0001_z_xuv_IRx0.001") #f = 0.78 au, I = 0.001%
 data_xuv_IR15_x0001 = np.loadtxt("Harm_vel_0001_z_xuv_IRx0.0001") #f = 0.78 au, I = 0.0001%
 
+# Region
+data_xuv_region_626 = np.loadtxt("Harm_vel_0001_z_dm2")
+data_xuv_region_729 = np.loadtxt("Harm_vel_0001_z_729")
+data_xuv_region_867 = np.loadtxt("Harm_vel_0001_z_867")
+
+
 #-------------------------------------------------------------------------------------------
 
 Int = 1e14 #Intensity
@@ -42,22 +48,26 @@ cutoff_2 = I_p + 3.17*U_p #empirical cutoff formula
 f_au = ((c/l_l)/(4.13567e16))*2*np.pi #frequency in atomic units 
 
 datasets = [
-    (data_IR15,  'cornflowerblue',  'IR only, 1.5 $\mu$m', 0, 'dashed'),
+    (data_IR15,  'cornflowerblue',  'IR only, 1.5 $\mu$m', 0, '--'),
     (data_xuv_only,  'orange',  'XUV only, 21.23 eV', 0, (0, (3, 3, 1, 3, 1, 3))),
-    (data_xuv_IR15_d0,  'navy',  'XUV, d = 0 fs', 0, 'dashdot'),
   
+    (data_xuv_IR15_d0,  'navy',  'XUV, d = 0 fs', 0, 'dashdot'),
     (data_xuv_IR15_dm2, 'aqua', 'XUV', -2.01, '-'),
     (data_xuv_IR15_a181_dm13, 'magenta', 'XUV', -13.16, (0, (1, 1))),
     
-    #(data_xuv_detune_5, 'lawngreen', 'Detuned 5 eV XUV', 0, '-'),
-    #(data_xuv_detune_16, 'red', 'Detuned 16 eV XUV', 0, '-'),
-    #(data_xuv_detune_40, 'orange', 'Detuned 40 eV XUV', 0, '-'),
+    #(data_xuv_region_626, 'aqua', '626 a.u. Region', -2.01, '-'),
+    #(data_xuv_region_729, 'blue', '729 a.u. Region', -2.01, 'dashdot'),
+    #(data_xuv_region_867, 'red', '867 a.u. Region', -2.01, (0, (1, 1))),
     
-    #(data_xuv_IR15_x1,  'red',  'XUV, Int. = 1%', 0, '-'),
-    #(data_xuv_IR15_d0,  'navy',  'XUV, Int. = 0.1%', 0, '-'),
-    #(data_xuv_IR15_x01,  'lawngreen',  'XUV, Int. = 0.01%', 0, '-'),
-    #(data_xuv_IR15_x001,  'orange',  'XUV, Int. = 0.001%', 0, '-'),
-    #(data_xuv_IR15_x0001,  'violet',  'XUV, Int. = 0.0001%', 0, '-'),
+    #(data_xuv_detune_5, 'lawngreen', 'Detuned 5 eV XUV', 0, (0, (3, 3, 1, 3, 1, 3))),
+    #(data_xuv_detune_16, 'red', 'Detuned 16 eV XUV', 0, (0, (1, 1))),
+    #(data_xuv_detune_40, 'orange', 'Detuned 40 eV XUV', 0, '--'),
+    
+    #(data_xuv_IR15_x1,    'red',      r'XUV, $I = 10^{12}\,\mathrm{{W\,cm^{{-2}}}}$', 0, '--'),
+    #(data_xuv_IR15_d0,   'navy',      r'XUV, $I = 10^{11}\,\mathrm{W\,cm^{-2}}$', 0, (0, (1, 1))),
+    #(data_xuv_IR15_x01,  'lawngreen', r'XUV, $I = 10^{10}\,\mathrm{W\,cm^{-2}}$', 0, 'dashdot'),
+    #(data_xuv_IR15_x001, 'orange',    r'XUV, $I = 10^{9}\,\mathrm{W\,cm^{-2}}$', 0, (0, (3, 3, 1, 3, 1, 3))),
+    #(data_xuv_IR15_x0001,'violet',    r'XUV, $I = 10^{8}\,\mathrm{W\,cm^{-2}}$', 0, (0, (3, 4, 1, 4, 1, 4, 1, 4))),
 ]
 plt.figure(figsize=(8, 5))
 
@@ -84,10 +94,10 @@ plt.ylabel("HHG Intensity (arb. units)")
 plt.xlim(0, 100)
 plt.ylim(1e-12,1e4)
 
-plt.vlines(92, 0, 10e3, 'green', '--', label='Calculated Cutoff')
-plt.axvline(79, color='grey', linestyle=':', label='Reduced Cutoff')
+#plt.axvline(20.23, color='grey', linestyle=':', label='Reduced Cutoff')
+#plt.vlines(92, 0, 10e3, 'green', '--', label='Calculated Cutoff')
 plt.legend(loc ='upper right')
-plt.savefig("helium_hhg_IR15_xuv_delay_dash.png")
+plt.savefig("helium_hhg_IR15_xuv_dash.png")
 plt.show()
 
 

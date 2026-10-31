@@ -6,8 +6,7 @@ This repository contains raw experimental data and analysis code for:
 
 Eva Loughridge, QUB MSci Thesis April 2026
 
-https://doi.org/10.5281/zenodo.20811793
-
+https://doi.org/10.5281/zenodo.23839517
 
 ## Data Directory
 Raw data generated using RMT (see https://gitlab.com/Uk-amor/RMT/rmt) on the Kelvin2 high-performance computing facility. 

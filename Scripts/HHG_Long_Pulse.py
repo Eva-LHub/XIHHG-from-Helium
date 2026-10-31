@@ -17,9 +17,9 @@ data_xuv_IR15_d0 = np.loadtxt("Harm_vel_0001_z_xuv_IR1.5")  # f = 0.78 au, d = 0
 data_xuv_IR15_dm2 = np.loadtxt("Harm_vel_0001_z_dm2")       # f = 0.78 au, d = -2 fs
 
 # Long Pulse
-data_IR_pulse = np.loadtxt("Harm_vel_0001_z_train")
-data_xuv_pulse_d0 = np.loadtxt("Harm_vel_0001_z_train_d0")
-data_xuv_pulse_dm2 = np.loadtxt("Harm_vel_0001_z_train_dm2")
+data_IR_long = np.loadtxt("Harm_vel_0001_z_long")
+data_xuv_long_d0 = np.loadtxt("Harm_vel_0001_z_long_d0")
+data_xuv_long_dm2 = np.loadtxt("Harm_vel_0001_z_long_dm2")
 
 # -------------------------------------------------------------------------------------------
 
@@ -39,23 +39,18 @@ harm = f_au * p_e                              # Harmonics
 
 datasets = [
 
-    (data_IR_pulse, 'cornflowerblue',
-     'Long pulse: IR only, 1.5 $\\mu$m', 0, 'dashdot'),
+    (data_IR_long, 'cornflowerblue',
+     'Long pulse: IR only, 1.5 $\\mu$m', 0, ':'),
 
-    (data_xuv_pulse_d0, 'navy',
-     'Long pulse: XUV, d = 0 fs', 0, '-'),
+    (data_xuv_long_d0, 'navy', 'Long pulse: XUV, d = 0 fs', 0, '-'),
 
-    (data_xuv_pulse_dm2, 'aqua',
-     'Long pulse: XUV', -2.01, (0, (1, 1))),
+    #(data_xuv_long_dm2, 'aqua', 'Long pulse: XUV', -2.01, (0, (1, 1))),
 
-    (data_IR15, 'lawngreen',
-     'Short pulse: IR only, 1.5 $\\mu$m', 0, '--'),
+    #(data_IR15, 'lawngreen', 'Short pulse: IR only, 1.5 $\\mu$m', 0, '--'),
 
-    (data_xuv_IR15_d0, 'orange',
-     'Short pulse: XUV, d = 0 fs', 0, '-'),
+    #(data_xuv_IR15_d0, 'orange', 'Short pulse: XUV, d = 0 fs', 0, '-'),
 
-    (data_xuv_IR15_dm2, 'red',
-     'Short pulse: XUV', -2.01, (0, (1, 1))),
+    #(data_xuv_IR15_dm2, 'red','Short pulse: XUV', -2.01, (0, (1, 1))),
 ]
 
 fig, ax = plt.subplots(figsize=(8, 5))
@@ -67,9 +62,9 @@ for data, color, intensity_label, delay, linestyle in datasets:
     energy = data[:, 0]
     spectrum = data[:, 1]
 
-    window_size = 7
-    window = np.ones(window_size) / window_size
-    spectrum_smooth = np.convolve(spectrum, window, mode='same')
+    #window_size = 7
+    #window = np.ones(window_size) / window_size
+    #spectrum_smooth = np.convolve(spectrum, window, mode='same')
 
     if delay:
         label = f"{intensity_label}, d = {delay} fs"
@@ -78,7 +73,8 @@ for data, color, intensity_label, delay, linestyle in datasets:
 
     line, = ax.semilogy(
         energy,
-        spectrum_smooth,
+        #spectrum_smooth,
+        spectrum,
         linestyle=linestyle,
         color=color,
         linewidth=1.5,
@@ -109,26 +105,26 @@ cutoff_line = ax.vlines(
 
 xuv_legend = ax.legend(
     handles=[
-        line_handles['Long pulse: XUV, d = 0 fs'],
-        line_handles['Long pulse: XUV, d = -2.01 fs'],
-        line_handles['Short pulse: XUV, d = 0 fs'],
-        line_handles['Short pulse: XUV, d = -2.01 fs']
+        #line_handles['Long pulse: XUV, d = -2.01 fs'],
+        #line_handles['Short pulse: XUV, d = 0 fs'],
+        #line_handles['Short pulse: XUV, d = -2.01 fs']
     ],
     loc='upper right'
 )
 
-ax.add_artist(xuv_legend)
+#ax.add_artist(xuv_legend)
 
 
 ax.legend(
     handles=[
+        line_handles['Long pulse: XUV, d = 0 fs'],
         line_handles['Long pulse: IR only, 1.5 $\\mu$m'],
-        line_handles['Short pulse: IR only, 1.5 $\\mu$m'],
+        #line_handles['Short pulse: IR only, 1.5 $\\mu$m'],
         cutoff_line
     ],
     loc='lower left'
 )
 
 plt.tight_layout()
-plt.savefig("helium_hhg_xuv_long_pulse.png")
+plt.savefig("helium_hhg_xuv_long_pulse_unsmoothed.png")
 plt.show()

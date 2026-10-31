@@ -28,7 +28,6 @@ RMT provides the time-dependent wavefunction, from which can be computed the tim
 Four visualisation/analysis scripts for generating thesis figures:
 
 - `Scripts/HHG_XUV_IR.py` - Standard Script for visualising HHG Spectra, including various delays, detuned XUV energies and XUV intensities
-- `Scripts/traj_ADK_XUV_IR.py` - Return Energies Trajectory Script with modified ADK Ionisation Potential
 - `Scripts/HHG_XUV_IR_Delays.py`- Colour-map Script for the effect of the time delay on the HHG spectrum
 - `Scripts/HHG_Long_Pulse.py`- Script for visualising the HHG Spectrum of a Long Pulse
 - `Scripts/HHG_Detune_Yield.py`- Script for visualising the integrated yield vs XUV energy (detuned)

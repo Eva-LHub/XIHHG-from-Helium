@@ -35,11 +35,6 @@ data_xuv_detune_24 = np.loadtxt("Harm_vel_0001_z_24eV")
 data_xuv_detune_5 = np.loadtxt("Harm_vel_0001_z_4.89eV")
 data_xuv_detune_40 = np.loadtxt("Harm_vel_0001_z_40eV")
 
-# Intensities
-data_xuv_IR15_x1 = np.loadtxt("Harm_vel_0001_z_xuv_IRx1.0") #f = 0.78 au, I = 1%
-data_xuv_IR15_x01 = np.loadtxt("Harm_vel_0001_z_xuv_IRx0.01") #f = 0.78 au, I = 0.01%
-data_xuv_IR15_x001 = np.loadtxt("Harm_vel_0001_z_xuv_IRx0.001") #f = 0.78 au, I = 0.001%
-data_xuv_IR15_x0001 = np.loadtxt("Harm_vel_0001_z_xuv_IRx0.0001") #f = 0.78 au, I = 0.0001%
 
 #-------------------------------------------------------------------------------------------
 
@@ -61,15 +56,10 @@ datasets = [
     #(data_xuv_IR15_dm2, 'aqua', 'XUV', -2.01, '-'),
     #(data_xuv_IR15_a181_dm13, 'magenta', 'XUV', -13.16, (0, (1, 1))),
     
-    (data_xuv_detune_5, 'lawngreen', 'Detuned 5 eV XUV', 0, (0, (3, 3, 1, 3, 1, 3))),
-    (data_xuv_detune_16, 'red', 'Detuned 16 eV XUV', 0, (0, (1, 1))),
+    (data_xuv_detune_5, 'lawngreen', 'Detuned 4.90 eV XUV', 0, (0, (3, 3, 1, 3, 1, 3))),
+    (data_xuv_detune_16, 'red', 'Detuned 16.06 eV XUV', 0, (0, (1, 1))),
     (data_xuv_detune_40, 'orange', 'Detuned 40 eV XUV', 0, '--'),
     
-    #(data_xuv_IR15_x1,  'red',  'XUV, Int. = 1%', 0, '--'),
-    #(data_xuv_IR15_d0,  'navy',  'XUV, Int. = 0.1%', 0, (0, (1, 1))),
-    #(data_xuv_IR15_x01,  'lawngreen',  'XUV, Int. = 0.01%', 0, 'dashdot'),
-    #(data_xuv_IR15_x001,  'orange',  'XUV, Int. = 0.001%', 0, (0, (3, 3, 1, 3, 1, 3))),
-    #(data_xuv_IR15_x0001,  'violet',  'XUV, Int. = 0.0001%', 0, (0, (3, 4, 1, 4, 1, 4, 1, 4))),
 ]
 plt.figure(figsize=(8, 5))
 
@@ -136,7 +126,7 @@ ax1.legend(loc='upper right')
 detuning_energies = np.array([
     2,
     4,
-    4.89,
+    4.90,
     6,
     8,
     10,
